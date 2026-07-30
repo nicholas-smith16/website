@@ -2,8 +2,6 @@
 pagetitle: "Research — Nicholas Lloyd Smith"
 ---
 
-## research
-
 My work applies causal inference methods to questions in health and labor
 economics, with a focus on risky behaviors, time use, and policies that shape
 them.

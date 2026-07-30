@@ -2,11 +2,14 @@
 pagetitle: "Go Dawgs — Nicholas Lloyd Smith"
 ---
 
-::: {.dawgs}
-<video class="dawgs-media" autoplay loop muted playsinline>
-  <source src="assets/dawgs.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+<!-- Written as one raw HTML block on purpose: mixing a fenced div with a
+     <video> tag makes pandoc swallow the following markdown as video fallback
+     content, which then never renders. -->
 
-[33–18]{.score}
-:::
+<div class="dawgs">
+<video class="dawgs-media" autoplay loop muted playsinline>
+<source src="assets/dawgs.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+<span class="score">33&ndash;18</span>
+</div>
