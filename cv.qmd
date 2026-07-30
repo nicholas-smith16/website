@@ -1,10 +1,8 @@
 ---
-title: "CV"
+pagetitle: "CV — Nicholas Lloyd Smith"
 ---
 
-[Download CV (PDF)](assets/nicholas_smith_cv.pdf)
+## cv
 
-<object data="assets/nicholas_smith_cv.pdf" type="application/pdf" width="100%" height="800" style="border:1px solid #e6e6e6; margin-top:1.5rem;">
-  <p>Your browser does not support embedded PDFs.
-  <a href="assets/nicholas_smith_cv.pdf">Download the CV</a> instead.</p>
-</object>
+<a href="assets/nicholas_smith_cv.pdf" target="_blank" rel="noopener">Preview</a>.
+<a href="assets/nicholas_smith_cv.pdf" download="Nicholas_Lloyd_Smith_CV.pdf">Download</a>.

@@ -1,4 +1,4 @@
-# Academic Website — Nicholas L. Smith
+# Academic Website — Nicholas Lloyd Smith
 
 Quarto site deployed to GitHub Pages. Companion to the CV system in `../CV/`.
 

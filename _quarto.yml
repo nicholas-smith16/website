@@ -9,7 +9,7 @@ project:
     - CNAME
 
 website:
-  title: "Nicholas L. Smith"
+  title: "Nicholas Lloyd Smith"
   description: "PhD student in economics at Emory University. Health economics, labor economics, and causal inference."
   site-url: "https://nicholaslsmith.com"
   navbar:
@@ -28,8 +28,6 @@ website:
     #     text: Teaching
     #   - href: notes/index.qmd
     #     text: Notes
-  page-footer:
-    left: "&copy; 2026 Nicholas L. Smith"
 
 format:
   html:

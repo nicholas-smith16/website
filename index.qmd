@@ -1,16 +1,21 @@
 ---
-pagetitle: "Nicholas L. Smith"
+pagetitle: "Nicholas Lloyd Smith"
 ---
 
-:::: {.intro}
-![](assets/headshot.jpg){.headshot alt="Nicholas L. Smith"}
+:::::: {.columns}
 
-::: {.intro-text}
-I'm **Nicholas L. Smith**, a PhD student in the
+::: {.column width="49%"}
+![](assets/headshot.jpg){.headshot alt="Nicholas Lloyd Smith"}
+:::
+
+::: {.column width="5%"}
+:::
+
+::: {.column width="46%"}
+
+I'm **Nicholas Lloyd Smith**, a PhD student in the
 [Department of Economics](https://economics.emory.edu) at
 [Emory University](https://emory.edu).
-:::
-::::
 
 ## research
 
@@ -27,8 +32,8 @@ A couple of projects in progress...
 
 ## me
 
-Interests: Ambling, Wikipedia rabbit holes, cheering on Dawgs, and a full plate
-of TexMex food.
+*Interests:* Ambling, Wikipedia rabbit holes, cheering on Dawgs, and a full
+plate of TexMex food.
 
 ## more
 
@@ -38,4 +43,8 @@ of TexMex food.
 - [Google Scholar](https://scholar.google.com/citations?user=VSMnInMAAAAJ)
 :::
 
-Please look around, or reach me at [nicholas.smith [at] emory.edu]{.email}.
+Say howdy at [nicholas.smith [at] emory.edu]{.email}.
+
+:::
+
+::::::

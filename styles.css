@@ -1,16 +1,20 @@
-/* Nicholas L. Smith — spartan stylesheet.
+/* Nicholas Lloyd Smith — spartan stylesheet.
    Palette and type borrowed from dandelioncoffee.co.uk: black Times on warm
-   "writing paper" off-white, with the dandelion yellow-green as a sparing
-   accent. Links are Emory blue. */
+   "writing paper" off-white. Links are black with a hairline underline. */
 
 :root {
   --fg: #000;
   --bg: #f7f5ee;          /* warm off-white — dandelion's "writing paper" */
   --muted: #555;
   --rule: #d9d5c6;        /* bg, darkened — hairlines that don't shout */
-  --emory: #012169;       /* Emory blue */
-  --emory-hover: #1c4a9e;
-  --dandelion: #d3dd32;   /* accent only */
+
+  /* Bootstrap reads these on body AND on its own components (navbar, buttons,
+     footer). Overriding `body { font-family }` alone leaves those in sans, so
+     set the variables themselves. */
+  --bs-body-font-family: "Times New Roman", Times, serif;
+  --bs-headings-font-family: "Times New Roman", Times, serif;
+  --bs-body-bg: #f7f5ee;
+  --bs-body-color: #000;
 }
 
 /* --- Canvas -------------------------------------------------------------- */
@@ -28,19 +32,26 @@ body {
 }
 
 main.content {
-  max-width: 38rem;       /* ≈608px, dandelion's measure */
+  max-width: 48rem;       /* wide enough for the two-column home layout */
   padding-top: 1.5rem;
 }
 
-/* Home page has no `title:`, so Quarto emits an empty title block. Collapse it. */
+/* Pages set `pagetitle:` rather than `title:`, so Quarto emits an empty title
+   block. Collapse it. */
 #title-block-header:empty {
   display: none;
 }
 
 /* --- Headings ------------------------------------------------------------ */
 
-h1, h2, h3 {
+h1, h2, h3,
+.navbar,
+.navbar-brand,
+.nav-link {
   font-family: "Times New Roman", Times, serif;
+}
+
+h1, h2, h3 {
   font-weight: 700;
   color: var(--fg);
 }
@@ -50,15 +61,11 @@ h1 {
   margin-bottom: 1rem;
 }
 
-/* Lowercase section headers, dandelion underscore. */
 h2 {
   font-size: 1.15rem;
   text-transform: lowercase;
-  margin-top: 2.25rem;
-  margin-bottom: 0.85rem;
-  padding-bottom: 0.2rem;
-  border-bottom: 2px solid var(--dandelion);
-  display: inline-block;
+  margin-top: 2rem;
+  margin-bottom: 0.6rem;
 }
 
 h3 {
@@ -70,17 +77,16 @@ h3 {
 /* --- Links --------------------------------------------------------------- */
 
 a {
-  color: var(--emory);
+  color: var(--fg);
   text-decoration: underline;
   text-decoration-thickness: 1px;
   text-underline-offset: 0.12em;
-  text-decoration-color: color-mix(in srgb, var(--emory) 35%, transparent);
+  text-decoration-color: color-mix(in srgb, var(--fg) 40%, transparent);
 }
 
 a:hover {
-  color: var(--emory-hover);
-  text-decoration-color: var(--dandelion);
-  text-decoration-thickness: 2px;
+  color: var(--fg);
+  text-decoration-color: var(--fg);
 }
 
 /* --- Navbar -------------------------------------------------------------- */
@@ -90,12 +96,12 @@ a:hover {
   border-bottom: 1px solid var(--fg);
   padding-top: 0.3rem;
   padding-bottom: 0.3rem;
-  font-family: "Times New Roman", Times, serif;
 }
 
 .navbar .navbar-brand {
   font-weight: 700;
   color: var(--fg) !important;
+  text-decoration: none;
 }
 
 .navbar .nav-link {
@@ -106,51 +112,36 @@ a:hover {
 
 .navbar .nav-link:hover,
 .navbar .nav-link.active {
-  color: var(--emory) !important;
   text-decoration: underline;
-  text-decoration-color: var(--dandelion);
-  text-decoration-thickness: 2px;
+  text-decoration-thickness: 1px;
   text-underline-offset: 0.2em;
 }
 
-/* --- Home page intro ----------------------------------------------------- */
+/* --- Home page two-column layout ----------------------------------------- */
 
-.intro {
-  display: flex;
-  gap: 1.5rem;
-  align-items: center;
-  margin-bottom: 0.5rem;
-}
-
-/* Pandoc wraps the image in its own <p>; that <p> is the flex child. */
-.intro > p:first-child {
-  flex: 0 0 auto;
-  margin: 0;
-  line-height: 0;
-}
-
-.intro .headshot {
-  width: 130px;
+/* Ed Rubin's proportions: 49% image / 5% gutter / 46% text. The text column
+   runs longer than the image, which is intended. */
+.headshot {
+  width: 100%;
   border: 1px solid var(--fg);
 }
 
-.intro-text {
-  flex: 1 1 auto;
-  font-size: 1.15rem;
+/* First element in the text column shouldn't have heading margin above it. */
+.column > p:first-child {
+  margin-top: 0;
 }
 
-.intro-text p:last-child {
-  margin-bottom: 0;
-}
-
-@media (max-width: 600px) {
-  .intro {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 1rem;
+@media (max-width: 700px) {
+  /* Stack on narrow screens; Quarto's inline widths need overriding. */
+  .columns {
+    display: block;
   }
-  .intro .headshot {
-    width: 110px;
+  .columns > .column {
+    width: 100% !important;
+  }
+  .headshot {
+    width: 60%;
+    margin-bottom: 1.25rem;
   }
 }
 
@@ -210,19 +201,4 @@ a:hover {
 .paper .meta {
   color: var(--muted);
   font-size: 0.95rem;
-}
-
-/* --- Footer -------------------------------------------------------------- */
-
-.nav-footer {
-  border-top: 1px solid var(--rule);
-  background: var(--bg);
-  font-size: 0.88rem;
-  color: var(--muted);
-  min-height: auto;
-  padding: 1rem 0;
-}
-
-.nav-footer a {
-  color: var(--muted);
 }
