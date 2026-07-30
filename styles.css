@@ -64,7 +64,7 @@ h1 {
 h2 {
   font-size: 1.15rem;
   text-transform: lowercase;
-  margin-top: 2rem;
+  margin-top: 1.35rem;    /* 2rem, tightened by a third */
   margin-bottom: 0.6rem;
 }
 
@@ -131,17 +131,35 @@ a:hover {
   margin-top: 0;
 }
 
+/* Contact line sits a full section-gap below the last item above it. */
+.contact {
+  display: block;
+  margin-top: 1.35rem;
+}
+
 @media (max-width: 700px) {
-  /* Stack on narrow screens; Quarto's inline widths need overriding. */
+  /* Stack on narrow screens, text first — the bio should lead on a phone,
+     with the headshot following it. Flex `order` does this without changing
+     the source order that desktop and screen readers rely on. */
   .columns {
-    display: block;
+    display: flex;
+    flex-direction: column;
   }
   .columns > .column {
     width: 100% !important;
   }
+  .columns > .column:first-child {   /* headshot */
+    order: 2;
+  }
+  .columns > .column:nth-child(2) {  /* gutter — nothing to show stacked */
+    display: none;
+  }
+  .columns > .column:last-child {    /* text */
+    order: 1;
+  }
   .headshot {
     width: 60%;
-    margin-bottom: 1.25rem;
+    margin-top: 1.5rem;
   }
 }
 
@@ -173,11 +191,11 @@ a:hover {
 /* --- Dawgs page ---------------------------------------------------------- */
 
 .dawgs {
-  text-align: center;
   margin-top: 2rem;
 }
 
 .dawgs-media {
+  display: block;
   max-width: 100%;
   border: 1px solid var(--fg);
 }
@@ -186,7 +204,7 @@ a:hover {
   display: block;
   margin-top: 0.75rem;
   font-size: 1.5rem;
-  font-weight: 700;
+  font-weight: 400;
 }
 
 /* --- Email --------------------------------------------------------------- */
