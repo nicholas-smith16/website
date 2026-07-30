@@ -13,6 +13,17 @@ website:
   description: "PhD student in economics at Emory University. Health economics, labor economics, and causal inference."
   site-url: "https://nicholaslsmith.com"
   favicon: assets/favicon.png
+  # Link previews (iMessage, Slack, WhatsApp, X, LinkedIn). Without these,
+  # scrapers grab the largest image on the page — i.e. the headshot.
+  open-graph:
+    image: assets/share.png
+    image-width: 1200
+    image-height: 630
+    description: "PhD student in economics at Emory University."
+  twitter-card:
+    image: assets/share.png
+    card-style: summary_large_image
+    description: "PhD student in economics at Emory University."
   navbar:
     background: light
     search: false
