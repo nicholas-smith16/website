@@ -11,3 +11,4 @@ example_websites.md
 
 # Stray root-level render artifacts from `quarto preview`
 /*.html
+CONTEXT.md
