@@ -12,6 +12,7 @@ website:
   title: "Nicholas Lloyd Smith"
   description: "PhD student in economics at Emory University. Health economics, labor economics, and causal inference."
   site-url: "https://nicholaslsmith.com"
+  favicon: assets/favicon.png
   navbar:
     background: light
     search: false
