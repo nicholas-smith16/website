@@ -5,24 +5,25 @@ pagetitle: "Research — Nicholas Lloyd Smith"
 ## research
 
 My work applies causal inference methods to questions in health and labor
-economics, with a focus on risky behaviors and the policies that shape them.
+economics, with a focus on risky behaviors, time use, and policies that shape
+them.
 
 ## work in progress
 
 ::: {.paper}
-[Male Entry to Female-Dominated Occupations]{.title}
+[Male Entry to Female-Dominated Occupations]{.wip}
 
 [with Sara J. Markowitz]{.meta}
 :::
 
 ::: {.paper}
-[Effects of Sports Gambling Legalization on Health Outcomes]{.title}
+[Effects of Sports Gambling Legalization on Health Outcomes]{.wip}
 :::
 
 ## fellowships and awards
 
 ::: {.paper}
-[American Institute for Boys and Men Graduate Research Fellowship]{.title}
+American Institute for Boys and Men Graduate Research Fellowship
 
 [2026–2027 · Competitive fellowship supporting doctoral research]{.meta}
 :::

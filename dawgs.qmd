@@ -3,8 +3,10 @@ pagetitle: "Go Dawgs — Nicholas Lloyd Smith"
 ---
 
 ::: {.dawgs}
-<!-- TODO: drop the GIF at assets/dawgs.gif and uncomment the line below. -->
-<!-- ![](assets/dawgs.gif){.dawgs-media alt="Georgia Bulldogs"} -->
+<video class="dawgs-media" autoplay loop muted playsinline>
+  <source src="assets/dawgs.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
 [33–18]{.score}
 :::

@@ -14,13 +14,12 @@ pagetitle: "Nicholas Lloyd Smith"
 ::: {.column width="46%"}
 
 I'm **Nicholas Lloyd Smith**, a PhD student in the
-[Department of Economics](https://economics.emory.edu) at
-[Emory University](https://emory.edu).
+[Department of Economics](https://economics.emory.edu) at Emory University.
 
 ## research
 
-I'm an applied microeconomist working at the intersection of health and labor
-economics. I use causal inference methods to study risky behaviors and the
+I'm an applied microeconomist interested in health and labor economics. I aim
+to use causal inference methods to study risky behaviors, time use, and
 policies that shape them.
 
 A couple of projects in progress...
@@ -42,10 +41,12 @@ A couple of projects in progress...
 ::: {.arrows}
 - [American Institute for Boys and Men](https://aibm.org) Graduate Research
   Fellow, 2026–2027
-- [Google Scholar](https://scholar.google.com/citations?user=VSMnInMAAAAJ)
 :::
+<!-- Hidden until there are publications to show:
+- [Google Scholar](https://scholar.google.com/citations?user=VSMnInMAAAAJ)
+-->
 
-Say howdy at [nicholas.smith [at] emory.edu]{.email}.
+[Say howdy at [nicholas.smith [at] emory.edu]{.email}.]{.contact}
 
 :::
 
