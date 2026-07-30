@@ -20,7 +20,8 @@ website:
         text: Home
       - href: research.qmd
         text: Research
-      - href: cv.qmd
+      # Straight to the PDF — no interstitial CV page.
+      - href: assets/nicholas_smith_cv.pdf
         text: CV
     # NOTE: notes/index.qmd and teaching.qmd are deliberately absent from the
     # nav. Both still build and are reachable by URL. To publish either, add:

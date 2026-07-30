@@ -1,0 +1,10 @@
+---
+pagetitle: "Go Dawgs — Nicholas Lloyd Smith"
+---
+
+::: {.dawgs}
+<!-- TODO: drop the GIF at assets/dawgs.gif and uncomment the line below. -->
+<!-- ![](assets/dawgs.gif){.dawgs-media alt="Georgia Bulldogs"} -->
+
+[33–18]{.score}
+:::

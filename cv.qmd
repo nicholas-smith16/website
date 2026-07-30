@@ -1,8 +1,0 @@
----
-pagetitle: "CV — Nicholas Lloyd Smith"
----
-
-## cv
-
-<a href="assets/nicholas_smith_cv.pdf" target="_blank" rel="noopener">Preview</a>.
-<a href="assets/nicholas_smith_cv.pdf" download="Nicholas_Lloyd_Smith_CV.pdf">Download</a>.
