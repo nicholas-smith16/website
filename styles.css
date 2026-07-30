@@ -1,92 +1,125 @@
 /* Nicholas L. Smith — spartan stylesheet.
-   Deliberately small: set type, color, and measure; inherit the rest from Quarto. */
+   Palette and type borrowed from dandelioncoffee.co.uk: black Times on warm
+   "writing paper" off-white, with the dandelion yellow-green as a sparing
+   accent. Links are Emory blue. */
 
-/* --- Type ---------------------------------------------------------------- */
-
-body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-  font-size: 17px;
-  line-height: 1.65;
-  color: #24292e;
-  background: #fff;
+:root {
+  --fg: #000;
+  --bg: #f7f5ee;          /* warm off-white — dandelion's "writing paper" */
+  --muted: #555;
+  --rule: #d9d5c6;        /* bg, darkened — hairlines that don't shout */
+  --emory: #012169;       /* Emory blue */
+  --emory-hover: #1c4a9e;
+  --dandelion: #d3dd32;   /* accent only */
 }
 
+/* --- Canvas -------------------------------------------------------------- */
+
+html,
+body {
+  background: var(--bg);
+}
+
+body {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 17px;
+  line-height: 1.5;
+  color: var(--fg);
+}
+
+main.content {
+  max-width: 38rem;       /* ≈608px, dandelion's measure */
+  padding-top: 1.5rem;
+}
+
+/* Home page has no `title:`, so Quarto emits an empty title block. Collapse it. */
+#title-block-header:empty {
+  display: none;
+}
+
+/* --- Headings ------------------------------------------------------------ */
+
 h1, h2, h3 {
-  font-weight: 600;
-  color: #000;
-  letter-spacing: -0.01em;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 700;
+  color: var(--fg);
 }
 
 h1 {
-  font-size: 1.9rem;
-  margin-bottom: 1.25rem;
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
 }
 
+/* Lowercase section headers, dandelion underscore. */
 h2 {
   font-size: 1.15rem;
-  margin-top: 2.5rem;
-  margin-bottom: 1rem;
-  padding-bottom: 0.35rem;
-  border-bottom: 1px solid #e6e6e6;
+  text-transform: lowercase;
+  margin-top: 2.25rem;
+  margin-bottom: 0.85rem;
+  padding-bottom: 0.2rem;
+  border-bottom: 2px solid var(--dandelion);
+  display: inline-block;
 }
 
 h3 {
   font-size: 1.02rem;
-  margin-top: 1.75rem;
-  margin-bottom: 0.25rem;
+  margin-top: 1.6rem;
+  margin-bottom: 0.2rem;
 }
 
 /* --- Links --------------------------------------------------------------- */
 
 a {
-  color: #123a6b;
+  color: var(--emory);
   text-decoration: underline;
   text-decoration-thickness: 1px;
-  text-underline-offset: 2px;
+  text-underline-offset: 0.12em;
+  text-decoration-color: color-mix(in srgb, var(--emory) 35%, transparent);
 }
 
 a:hover {
-  color: #b5361a;
-}
-
-/* --- Measure ------------------------------------------------------------- */
-
-main.content {
-  max-width: 46rem;
-  padding-top: 1rem;
+  color: var(--emory-hover);
+  text-decoration-color: var(--dandelion);
+  text-decoration-thickness: 2px;
 }
 
 /* --- Navbar -------------------------------------------------------------- */
 
 .navbar {
-  background: #fff !important;
-  border-bottom: 1px solid #e6e6e6;
-  padding-top: 0.4rem;
-  padding-bottom: 0.4rem;
+  background: var(--bg) !important;
+  border-bottom: 1px solid var(--fg);
+  padding-top: 0.3rem;
+  padding-bottom: 0.3rem;
+  font-family: "Times New Roman", Times, serif;
 }
 
 .navbar .navbar-brand {
-  font-weight: 600;
-  color: #000;
+  font-weight: 700;
+  color: var(--fg) !important;
 }
 
 .navbar .nav-link {
-  color: #4a5158 !important;
+  color: var(--fg) !important;
+  text-transform: lowercase;
   text-decoration: none;
 }
 
 .navbar .nav-link:hover,
 .navbar .nav-link.active {
-  color: #123a6b !important;
+  color: var(--emory) !important;
+  text-decoration: underline;
+  text-decoration-color: var(--dandelion);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.2em;
 }
 
 /* --- Home page intro ----------------------------------------------------- */
 
 .intro {
   display: flex;
-  gap: 2rem;
-  align-items: flex-start;
-  margin-bottom: 1.5rem;
+  gap: 1.5rem;
+  align-items: center;
+  margin-bottom: 0.5rem;
 }
 
 /* Pandoc wraps the image in its own <p>; that <p> is the flex child. */
@@ -97,12 +130,13 @@ main.content {
 }
 
 .intro .headshot {
-  width: 190px;
-  border-radius: 2px;
+  width: 130px;
+  border: 1px solid var(--fg);
 }
 
 .intro-text {
   flex: 1 1 auto;
+  font-size: 1.15rem;
 }
 
 .intro-text p:last-child {
@@ -112,11 +146,37 @@ main.content {
 @media (max-width: 600px) {
   .intro {
     flex-direction: column;
-    gap: 1.25rem;
+    align-items: flex-start;
+    gap: 1rem;
   }
   .intro .headshot {
-    width: 150px;
+    width: 110px;
   }
+}
+
+/* --- Arrow lists (research projects, other items) ------------------------ */
+
+.arrows ul {
+  list-style: none;
+  padding-left: 0.25rem;
+  margin-bottom: 0;
+}
+
+.arrows li {
+  margin-bottom: 0.3rem;
+  text-indent: -1.35rem;
+  padding-left: 1.35rem;
+}
+
+.arrows li::before {
+  content: "↳";
+  color: var(--muted);
+  margin-right: 0.5rem;
+}
+
+/* Work in progress — no link yet, so mark it as text rather than a dead link. */
+.wip {
+  border-bottom: 1px dotted var(--muted);
 }
 
 /* --- Email --------------------------------------------------------------- */
@@ -125,9 +185,10 @@ main.content {
    Selectable so a human can still copy it. */
 .email {
   user-select: all;
+  white-space: nowrap;
 }
 
-/* --- Research entries ---------------------------------------------------- */
+/* --- Research page entries ----------------------------------------------- */
 
 .paper {
   margin-bottom: 1.5rem;
@@ -142,24 +203,26 @@ main.content {
 }
 
 .paper .title {
-  font-weight: 600;
-  color: #000;
+  font-weight: 700;
+  color: var(--fg);
 }
 
 .paper .meta {
-  color: #6a737d;
-  font-size: 0.93rem;
+  color: var(--muted);
+  font-size: 0.95rem;
 }
 
 /* --- Footer -------------------------------------------------------------- */
 
 .nav-footer {
-  border-top: 1px solid #e6e6e6;
+  border-top: 1px solid var(--rule);
+  background: var(--bg);
   font-size: 0.88rem;
-  color: #6a737d;
-  background: #fff;
+  color: var(--muted);
+  min-height: auto;
+  padding: 1rem 0;
 }
 
 .nav-footer a {
-  color: #6a737d;
+  color: var(--muted);
 }
