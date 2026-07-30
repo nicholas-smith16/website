@@ -123,17 +123,19 @@ ul.task-list li input[type="checkbox"] {
 
 
 
+<!-- Written as one raw HTML block on purpose: mixing a fenced div with a
+     <video> tag makes pandoc swallow the following markdown as video fallback
+     content, which then never renders. -->
 <div class="dawgs">
 <video class="dawgs-media" autoplay="" loop="" muted="" playsinline="">
 <source src="assets/dawgs.mp4" type="video/mp4">
-<p>Your browser does not support the video tag. </p>
-<p><span class="score">33–18</span></p>
-<p>:::</p>
+Your browser does not support the video tag. </video> <span class="score">33–18</span>
+</div>
 
 
-</video></div>
+</main></div>
 
-</main> <!-- /main -->
+ <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const isCodeAnnotation = (el) => {
@@ -532,7 +534,7 @@ ul.task-list li input[type="checkbox"] {
     }
   });
   </script>
-</div> <!-- /content -->
+ <!-- /content -->
 
 
 
