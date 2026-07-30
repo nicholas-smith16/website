@@ -1,5 +1,4 @@
 ---
-title: "Nicholas L. Smith"
 pagetitle: "Nicholas L. Smith"
 ---
 
@@ -7,30 +6,36 @@ pagetitle: "Nicholas L. Smith"
 ![](assets/headshot.jpg){.headshot alt="Nicholas L. Smith"}
 
 ::: {.intro-text}
-I am a PhD student in economics at Emory University, working in applied
-microeconomics. My research sits at the intersection of health and labor
-economics, and I use causal inference methods to study risky behaviors and
-the policies that shape them.
-
-Current projects examine male entry into female-dominated occupations and
-the health consequences of sports gambling legalization.
+I'm **Nicholas L. Smith**, a PhD student in the
+[Department of Economics](https://economics.emory.edu) at
+[Emory University](https://emory.edu).
 :::
 ::::
 
-I am a 2026–2027 [American Institute for Boys and Men](https://aibm.org)
-Graduate Research Fellow. Before Emory, I earned a BBA in economics and
-finance from the University of Georgia.
+## research
 
-## Research interests
+I'm an applied microeconomist working at the intersection of health and labor
+economics. I use causal inference methods to study risky behaviors and the
+policies that shape them.
 
-Health economics · Labor economics · Causal inference · Economics of risky behaviors
+A couple of projects in progress...
 
-## Contact
+::: {.arrows}
+- [Male Entry to Female-Dominated Occupations]{.wip}
+- [Effects of Sports Gambling Legalization on Health Outcomes]{.wip}
+:::
 
-Department of Economics, Emory University\
-R. Randall Rollins Building, R400A-4\
-1516 Clifton Road NE, Atlanta, GA 30322
+## me
 
-[nicholas.smith [at] emory.edu]{.email}
+Interests: Ambling, Wikipedia rabbit holes, cheering on Dawgs, and a full plate
+of TexMex food.
 
-[Google Scholar](https://scholar.google.com/citations?user=VSMnInMAAAAJ)
+## more
+
+::: {.arrows}
+- [American Institute for Boys and Men](https://aibm.org) Graduate Research
+  Fellow, 2026–2027
+- [Google Scholar](https://scholar.google.com/citations?user=VSMnInMAAAAJ)
+:::
+
+Please look around, or reach me at [nicholas.smith [at] emory.edu]{.email}.

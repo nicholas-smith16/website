@@ -20,17 +20,16 @@ website:
         text: Home
       - href: research.qmd
         text: Research
-      - href: teaching.qmd
-        text: Teaching
       - href: cv.qmd
         text: CV
-    # NOTE: notes/index.qmd is deliberately absent from the nav.
-    # To publish the writing section, add:
+    # NOTE: notes/index.qmd and teaching.qmd are deliberately absent from the
+    # nav. Both still build and are reachable by URL. To publish either, add:
+    #   - href: teaching.qmd
+    #     text: Teaching
     #   - href: notes/index.qmd
     #     text: Notes
   page-footer:
     left: "&copy; 2026 Nicholas L. Smith"
-    right: "Built with [Quarto](https://quarto.org)"
 
 format:
   html:
