@@ -89,14 +89,24 @@ Add an abstract as a plain paragraph inside the `:::` block when one exists.
 `nicholaslsmith.com` → GitHub Pages. The `CNAME` file in this directory is what
 binds them; do not delete it, as `quarto publish` copies it into the deploy.
 
-DNS records at the registrar:
+DNS is managed at **Cloudflare** (also the registrar). Cloudflare supports
+CNAME flattening at the apex, so two CNAME records replace the four A records
+GitHub's docs describe:
 
-| Type | Name | Value |
-|------|------|-------|
-| A | @ | 185.199.108.153 |
-| A | @ | 185.199.109.153 |
-| A | @ | 185.199.110.153 |
-| A | @ | 185.199.111.153 |
-| CNAME | www | `<username>.github.io.` |
+| Type | Name | Target | Proxy status |
+|------|------|--------|--------------|
+| CNAME | `@` | `nicholas-smith16.github.io` | **DNS only** (grey cloud) |
+| CNAME | `www` | `nicholas-smith16.github.io` | **DNS only** (grey cloud) |
 
-After DNS propagates, enable **Enforce HTTPS** in the repo's Pages settings.
+**The grey cloud matters.** With Cloudflare's proxy on (orange cloud), GitHub
+cannot complete the ACME challenge to issue the TLS certificate, and *Enforce
+HTTPS* stays greyed out. Leave both records DNS-only.
+
+A static site on GitHub Pages gains little from the Cloudflare proxy, so the
+simplest correct configuration is to leave it off permanently. If you ever do
+enable it, set Cloudflare's SSL/TLS mode to **Full (strict)** first — anything
+less causes a redirect loop.
+
+Once DNS resolves, GitHub issues the certificate automatically (usually minutes,
+occasionally up to an hour). Then enable **Enforce HTTPS** under
+Settings → Pages.
