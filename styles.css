@@ -1,0 +1,165 @@
+/* Nicholas L. Smith — spartan stylesheet.
+   Deliberately small: set type, color, and measure; inherit the rest from Quarto. */
+
+/* --- Type ---------------------------------------------------------------- */
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-size: 17px;
+  line-height: 1.65;
+  color: #24292e;
+  background: #fff;
+}
+
+h1, h2, h3 {
+  font-weight: 600;
+  color: #000;
+  letter-spacing: -0.01em;
+}
+
+h1 {
+  font-size: 1.9rem;
+  margin-bottom: 1.25rem;
+}
+
+h2 {
+  font-size: 1.15rem;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.35rem;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+h3 {
+  font-size: 1.02rem;
+  margin-top: 1.75rem;
+  margin-bottom: 0.25rem;
+}
+
+/* --- Links --------------------------------------------------------------- */
+
+a {
+  color: #123a6b;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+}
+
+a:hover {
+  color: #b5361a;
+}
+
+/* --- Measure ------------------------------------------------------------- */
+
+main.content {
+  max-width: 46rem;
+  padding-top: 1rem;
+}
+
+/* --- Navbar -------------------------------------------------------------- */
+
+.navbar {
+  background: #fff !important;
+  border-bottom: 1px solid #e6e6e6;
+  padding-top: 0.4rem;
+  padding-bottom: 0.4rem;
+}
+
+.navbar .navbar-brand {
+  font-weight: 600;
+  color: #000;
+}
+
+.navbar .nav-link {
+  color: #4a5158 !important;
+  text-decoration: none;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+  color: #123a6b !important;
+}
+
+/* --- Home page intro ----------------------------------------------------- */
+
+.intro {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+}
+
+/* Pandoc wraps the image in its own <p>; that <p> is the flex child. */
+.intro > p:first-child {
+  flex: 0 0 auto;
+  margin: 0;
+  line-height: 0;
+}
+
+.intro .headshot {
+  width: 190px;
+  border-radius: 2px;
+}
+
+.intro-text {
+  flex: 1 1 auto;
+}
+
+.intro-text p:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 600px) {
+  .intro {
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+  .intro .headshot {
+    width: 150px;
+  }
+}
+
+/* --- Email --------------------------------------------------------------- */
+
+/* Plain text, not a mailto: — deliberate, to keep naive scrapers off it.
+   Selectable so a human can still copy it. */
+.email {
+  user-select: all;
+}
+
+/* --- Research entries ---------------------------------------------------- */
+
+.paper {
+  margin-bottom: 1.5rem;
+}
+
+.paper p {
+  margin-bottom: 0.1rem;
+}
+
+.paper p:last-child {
+  margin-bottom: 0;
+}
+
+.paper .title {
+  font-weight: 600;
+  color: #000;
+}
+
+.paper .meta {
+  color: #6a737d;
+  font-size: 0.93rem;
+}
+
+/* --- Footer -------------------------------------------------------------- */
+
+.nav-footer {
+  border-top: 1px solid #e6e6e6;
+  font-size: 0.88rem;
+  color: #6a737d;
+  background: #fff;
+}
+
+.nav-footer a {
+  color: #6a737d;
+}
