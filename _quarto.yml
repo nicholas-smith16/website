@@ -4,6 +4,9 @@ project:
   render:
     - "*.qmd"
     - "notes/*.qmd"
+  resources:
+    # Binds the custom domain; must land in _site for `quarto publish` to deploy it.
+    - CNAME
 
 website:
   title: "Nicholas L. Smith"

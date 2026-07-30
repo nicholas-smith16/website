@@ -1,3 +1,0 @@
--https://edrub.in/stuff.html
--https://www.sashachapin.com
--https://deadsimplesites.com

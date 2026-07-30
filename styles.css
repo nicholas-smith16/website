@@ -119,6 +119,14 @@ main.content {
   }
 }
 
+/* --- Email --------------------------------------------------------------- */
+
+/* Plain text, not a mailto: — deliberate, to keep naive scrapers off it.
+   Selectable so a human can still copy it. */
+.email {
+  user-select: all;
+}
+
 /* --- Research entries ---------------------------------------------------- */
 
 .paper {

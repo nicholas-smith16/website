@@ -31,4 +31,4 @@ Department of Economics, Emory University\
 R. Randall Rollins Building, R400A-4\
 1516 Clifton Road NE, Atlanta, GA 30322
 
-[nicholas.smith@emory.edu](mailto:nicholas.smith@emory.edu)
+[nicholas.smith [at] emory.edu]{.email}

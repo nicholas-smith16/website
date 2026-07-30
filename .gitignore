@@ -4,3 +4,7 @@
 *.log
 
 **/*.quarto_ipynb
+
+# Personal planning docs — kept locally, not published
+website-plan.md
+example_websites.md
