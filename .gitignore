@@ -8,3 +8,6 @@
 # Personal planning docs — kept locally, not published
 website-plan.md
 example_websites.md
+
+# Stray root-level render artifacts from `quarto preview`
+/*.html
