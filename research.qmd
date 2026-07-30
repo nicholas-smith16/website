@@ -1,0 +1,26 @@
+---
+title: "Research"
+---
+
+My work applies causal inference methods to questions in health and labor
+economics, with a focus on risky behaviors and the policies that shape them.
+
+## Work in progress
+
+::: {.paper}
+[Male Entry to Female-Dominated Occupations]{.title}
+
+[with Sara J. Markowitz]{.meta}
+:::
+
+::: {.paper}
+[Effects of Sports Gambling Legalization on Health Outcomes]{.title}
+:::
+
+## Fellowships and awards
+
+::: {.paper}
+[American Institute for Boys and Men Graduate Research Fellowship]{.title}
+
+[2026–2027 · Competitive fellowship supporting doctoral research]{.meta}
+:::

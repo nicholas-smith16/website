@@ -1,0 +1,34 @@
+---
+title: "Nicholas L. Smith"
+pagetitle: "Nicholas L. Smith"
+---
+
+:::: {.intro}
+![](assets/headshot.jpg){.headshot alt="Nicholas L. Smith"}
+
+::: {.intro-text}
+I am a PhD student in economics at Emory University, working in applied
+microeconomics. My research sits at the intersection of health and labor
+economics, and I use causal inference methods to study risky behaviors and
+the policies that shape them.
+
+Current projects examine male entry into female-dominated occupations and
+the health consequences of sports gambling legalization.
+:::
+::::
+
+I am a 2026–2027 [American Institute for Boys and Men](https://aibm.org)
+Graduate Research Fellow. Before Emory, I earned a BBA in economics and
+finance from the University of Georgia.
+
+## Research interests
+
+Health economics · Labor economics · Causal inference · Economics of risky behaviors
+
+## Contact
+
+Department of Economics, Emory University\
+R. Randall Rollins Building, R400A-4\
+1516 Clifton Road NE, Atlanta, GA 30322
+
+[nicholas.smith@emory.edu](mailto:nicholas.smith@emory.edu)
